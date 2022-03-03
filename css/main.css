@@ -17,9 +17,14 @@ body {
   background: #F3F3F3;
   display: flex;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
   justify-content: center;
   justify-items: center;
+}
+
+html {
+  height: -webkit-fill-available;
 }
 
 .wrapper {
