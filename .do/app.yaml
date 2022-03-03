@@ -1,0 +1,21 @@
+alerts:
+  - rule: DEPLOYMENT_FAILED
+  - rule: DOMAIN_FAILED
+name: iamjeroen-com
+region: ams
+static_sites:
+  - environment_slug: html
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: jeroen-visser/iamjeroen.com
+    name: iamjeroen-com
+    routes:
+      - path: /
+    source_dir: /
+domains:
+  - domain: www.iamjeroen.com
+    type: PRIMARY
+  - domain: iamjeroen.com
+    type: ALIAS
+    zone: iamjeroen.com
