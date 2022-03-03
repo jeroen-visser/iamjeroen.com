@@ -1,0 +1,133 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 66% auto;
+
+  .hero {
+    display: flex;
+    background: black;
+    width: 100%;
+    justify-content: center;
+
+    img.image-of-myself {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    background: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+
+    svg.logo {
+      height: 4em;
+      width: 4em;
+      margin: 1em auto;
+    }
+
+    h1 {
+      font-family: 'Tinos', sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: .2em;
+    }
+
+    p.subtitle {
+      font-family: 'Urbanist', sans-serif;
+      font-size: .9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: .2em auto;
+      max-width: 500px;
+    }
+
+    a {
+      display: block;
+      margin: 1em auto;
+      width: 2em;
+      height: 2em;
+    }
+
+    .icon-linkedin {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+      transform: scale(1);
+      animation: pulse-black 5s infinite;
+    }
+  }
+}
+
+@keyframes pulse-black {
+  0%, 25% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  50% {
+    transform: scale(1);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0);
+  }
+
+  75%, 100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+
+  body {
+    font-size: 32px;
+  }
+
+}
+
+@media only screen and (min-width: 1150px) {
+
+  .wrapper {
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+
+    grid-template-columns: 50% auto;
+    grid-template-areas:
+      "content hero";
+
+    .hero {
+      grid-area: hero;
+    }
+
+    .content {
+      grid-area: content;
+      justify-content: center;
+      justify-items: center;
+    }
+
+    .hero, .content {
+      height: 100vh;
+    }
+  }
+
+}
