@@ -1,6 +1,10 @@
 alerts:
   - rule: DEPLOYMENT_FAILED
   - rule: DOMAIN_FAILED
+domains:
+  - domain: iamjeroen.com
+    type: PRIMARY
+    zone: iamjeroen.com
 name: iamjeroen-com
 region: ams
 static_sites:
@@ -13,9 +17,3 @@ static_sites:
     routes:
       - path: /
     source_dir: /
-domains:
-  - domain: www.iamjeroen.com
-    type: PRIMARY
-  - domain: iamjeroen.com
-    type: ALIAS
-    zone: iamjeroen.com
