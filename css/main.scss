@@ -71,17 +71,24 @@ body {
     }
 
     a {
-      display: block;
-      margin: 1em auto;
-      width: 2em;
-      height: 2em;
+      margin-top: 2em;
+      margin-left: 70px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .more-info {
+      position: relative;
+      top: -.4em;
+      left: -.2em;
     }
 
     .icon-linkedin {
+      display: block;
+      width: 2em;
+      height: 2em;
       box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
       border-radius: 50%;
-      height: 100%;
-      width: 100%;
       transform: scale(1);
       animation: pulse-black 5s infinite;
     }
@@ -109,6 +116,22 @@ body {
 
   body {
     font-size: 32px;
+  }
+
+  .wrapper {
+
+    grid-template-rows: 50% auto;
+
+    .content {
+      a {
+        margin-top: 1em;
+      }
+
+      .more-info {
+        top: -.2em;
+        left: -.2em;
+      }
+    }
   }
 
 }

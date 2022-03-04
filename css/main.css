@@ -66,16 +66,22 @@ body {
   max-width: 500px;
 }
 .wrapper .content a {
-  display: block;
-  margin: 1em auto;
-  width: 2em;
-  height: 2em;
+  margin-top: 2em;
+  margin-left: 70px;
+  display: flex;
+  justify-content: center;
+}
+.wrapper .content .more-info {
+  position: relative;
+  top: -0.4em;
+  left: -0.2em;
 }
 .wrapper .content .icon-linkedin {
+  display: block;
+  width: 2em;
+  height: 2em;
   box-shadow: 0 0 0 0 black;
   border-radius: 50%;
-  height: 100%;
-  width: 100%;
   transform: scale(1);
   animation: pulse-black 5s infinite;
 }
@@ -97,6 +103,17 @@ body {
 @media only screen and (min-width: 800px) {
   body {
     font-size: 32px;
+  }
+
+  .wrapper {
+    grid-template-rows: 50% auto;
+  }
+  .wrapper .content a {
+    margin-top: 1em;
+  }
+  .wrapper .content .more-info {
+    top: -0.2em;
+    left: -0.2em;
   }
 }
 @media only screen and (min-width: 1150px) {
