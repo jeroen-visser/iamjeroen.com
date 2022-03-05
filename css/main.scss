@@ -34,7 +34,7 @@ body {
     justify-content: center;
 
     img.image-of-myself {
-      height: 100%;
+      width: 100%;
       object-fit: cover;
     }
   }
@@ -50,7 +50,7 @@ body {
     svg.logo {
       height: 4em;
       width: 4em;
-      margin: 1em auto;
+      margin: 0 auto;
     }
 
     h1 {
@@ -71,16 +71,17 @@ body {
     }
 
     a {
-      margin-top: 2em;
-      margin-left: 70px;
+      margin-top: 1em;
+      margin-left: 6em;
       display: flex;
       justify-content: center;
     }
 
     .more-info {
       position: relative;
-      top: -.4em;
+      top: -1em;
       left: -.2em;
+      width: 6em;
     }
 
     .icon-linkedin {
@@ -112,7 +113,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 768px) {
 
   body {
     font-size: 32px;
@@ -120,16 +121,16 @@ body {
 
   .wrapper {
 
-    grid-template-rows: 50% auto;
+    grid-template-rows: 60% auto;
 
     .content {
       a {
         margin-top: 1em;
+        margin-left: 4em;
       }
 
       .more-info {
-        top: -.2em;
-        left: -.2em;
+        width: 4em;
       }
     }
   }
@@ -138,15 +139,7 @@ body {
 
 @media only screen and (min-width: 1150px) {
 
-  body {
-    height: 100vh;
-  }
-
   .wrapper {
-    height: 100vh;
-    margin: 0 auto;
-    display: grid;
-
     grid-template-columns: 50% auto;
     grid-template-areas:
       "content hero";
@@ -157,8 +150,11 @@ body {
 
     .content {
       grid-area: content;
-      justify-content: center;
-      justify-items: center;
+
+      .more-info {
+        top: -1.3em;
+        left: -.3em;
+      }
     }
 
     .hero, .content {

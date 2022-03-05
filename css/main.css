@@ -34,7 +34,7 @@ body {
   justify-content: center;
 }
 .wrapper .hero img.image-of-myself {
-  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .wrapper .content {
@@ -48,7 +48,7 @@ body {
 .wrapper .content svg.logo {
   height: 4em;
   width: 4em;
-  margin: 1em auto;
+  margin: 0 auto;
 }
 .wrapper .content h1 {
   font-family: "Tinos", sans-serif;
@@ -66,15 +66,16 @@ body {
   max-width: 500px;
 }
 .wrapper .content a {
-  margin-top: 2em;
-  margin-left: 70px;
+  margin-top: 1em;
+  margin-left: 6em;
   display: flex;
   justify-content: center;
 }
 .wrapper .content .more-info {
   position: relative;
-  top: -0.4em;
+  top: -1em;
   left: -0.2em;
+  width: 6em;
 }
 .wrapper .content .icon-linkedin {
   display: block;
@@ -100,31 +101,24 @@ body {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 768px) {
   body {
     font-size: 32px;
   }
 
   .wrapper {
-    grid-template-rows: 50% auto;
+    grid-template-rows: 60% auto;
   }
   .wrapper .content a {
     margin-top: 1em;
+    margin-left: 4em;
   }
   .wrapper .content .more-info {
-    top: -0.2em;
-    left: -0.2em;
+    width: 4em;
   }
 }
 @media only screen and (min-width: 1150px) {
-  body {
-    height: 100vh;
-  }
-
   .wrapper {
-    height: 100vh;
-    margin: 0 auto;
-    display: grid;
     grid-template-columns: 50% auto;
     grid-template-areas: "content hero";
   }
@@ -133,8 +127,10 @@ body {
   }
   .wrapper .content {
     grid-area: content;
-    justify-content: center;
-    justify-items: center;
+  }
+  .wrapper .content .more-info {
+    top: -1.3em;
+    left: -0.3em;
   }
   .wrapper .hero, .wrapper .content {
     height: 100vh;
