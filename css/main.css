@@ -66,21 +66,13 @@ body {
   max-width: 500px;
 }
 .wrapper .content a {
-  margin-top: 3em;
-  margin-left: 6em;
-  display: flex;
-  justify-content: center;
-}
-.wrapper .content .more-info {
-  position: relative;
-  top: -5em;
-  left: -0.2em;
-  width: 6em;
+  margin: 1em auto;
 }
 .wrapper .content .icon-linkedin {
+  margin: 0 auto;
   display: block;
-  width: 2em;
-  height: 2em;
+  width: 3em;
+  height: 3em;
   box-shadow: 0 0 0 0 black;
   border-radius: 50%;
   transform: scale(1);
@@ -107,20 +99,6 @@ body {
   }
 
   .wrapper {
-    grid-template-rows: 60% auto;
-  }
-  .wrapper .content a {
-    margin-top: 1em;
-    margin-left: 4em;
-  }
-  .wrapper .content .more-info {
-    width: 4em;
-    top: -2.3em;
-    left: -0.3em;
-  }
-}
-@media only screen and (min-width: 1150px) {
-  .wrapper {
     grid-template-columns: 50% auto;
     grid-template-areas: "content hero";
   }
@@ -132,6 +110,13 @@ body {
   }
   .wrapper .hero, .wrapper .content {
     height: 100vh;
+  }
+  .wrapper .content a {
+    margin: 0.5em auto;
+  }
+  .wrapper .content .icon-linkedin {
+    width: 1.5em;
+    height: 1.5em;
   }
 }
 
